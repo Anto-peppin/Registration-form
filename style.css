@@ -10,7 +10,8 @@ body {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  margin: auto;
 
 }
 .form {
@@ -92,11 +93,11 @@ form{
   height: 50px;
   border-radius: 10px;
   background: linear-gradient(180deg, #282828, #202020);
-  box-shadow:
+  /* box-shadow:
     inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.25),
     0 0 0 2px rgba(0, 0, 0, 0.75),
-    10px 10px 15px rgba(0, 0, 0, 0.4);
+    10px 10px 15px rgba(0, 0, 0, 0.4); */
   overflow: hidden;
   transition:
     transform 0.1s ease-in-out,
@@ -152,7 +153,11 @@ form{
     0 0 0 2px rgba(0, 0, 0, 0.5),
     5px 10px 15px rgba(0, 0, 0, 0.3);
 }
+.keycap:disabled{
+  cursor: not-allowed;
+  filter: brightness(50%);
 
+}
 .keycap:active::before {
   top: 5px;
   left: 5px;
@@ -261,9 +266,7 @@ font-size: 14px;
 height: 14px;
 font-family: sans-serif;
 }
-button:disabled{
-  cursor: not-allowed;
-}
+
 .popup{
   padding: 10px;
   border-radius: 40px;
