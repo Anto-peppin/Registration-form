@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
+  height:100dvh;
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -12,6 +12,7 @@ body {
   padding-bottom: 10px;
  /* align-items: center; */
   overflow: hidden;
+  border: 1px solid;
 }
 .form {
   width: 400px;
