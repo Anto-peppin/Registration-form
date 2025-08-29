@@ -141,7 +141,7 @@ form {
 }
 .keycap:disabled {
   cursor: not-allowed;
-  filter: brightness(50%);
+  opacity: 0.4;
 }
 .keycap:active::before {
   top: 5px;
