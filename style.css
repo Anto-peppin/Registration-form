@@ -9,7 +9,9 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 10px 10px 10px 20px;
+  padding-bottom: 10px;
+ /* align-items: center; */
+  overflow: hidden;
 }
 .form {
   width: 400px;
@@ -39,15 +41,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 20px 20px;
+  padding: 25px 10px 10px;
   box-shadow: 0px 0px 10px black;
 }
 .hanger {
   position: absolute;
-  width: 50%;
-  bottom: 93%;
+  width: 150px;
+  bottom: 95%;
   z-index: 100;
-  filter: drop-shadow(0 2px 5px black);
+  filter: drop-shadow(0 2px 2px black);
   transform: rotate(1deg);
 }
 .form .register_text path {
@@ -118,14 +120,7 @@ form{
   gap: 8px;
   transition: transform 0.1s ease-in-out;
 }
-/* .img-cardes{
-  width:25%;
-  height: 75%;
-  background-image: url(./images/ben-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
+
 .keycap .enter-icon {
   width: 20px;
   height: 20px;
@@ -180,7 +175,7 @@ form{
 .input__container {
   position: relative;
   background: #f0f0f0;
-  padding: 15px 10px 10px 15px;
+  padding: 15px 10px 10px 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -194,7 +189,7 @@ form{
 }
 
 .input__container:hover {
-  transform: rotateX(5deg) rotateY(1 deg) scale(1.05);
+  transform: rotateX(5deg) rotateY(1 deg) scale(1.02);
   box-shadow: 10px 10px 0 -5px #e9b50b, 10px 10px 0 0 #000;
 }
 
@@ -215,10 +210,6 @@ form{
   text-transform: uppercase;
 }
 
-/* .input__button__shadow:hover {
-  transform: translateZ(10px) translateX(-5px) translateY(-5px);
-  box-shadow: 5px 5px 0 0 #000;
-} */
 .input__container:hover .input__button__shadow{
       transform: translateZ(10px) translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 0 0 #000;
@@ -272,6 +263,10 @@ color: red;
     .form{
         width: 95%;
     }
+    .input__search{
+      font-size: 15px;
+    }
+    
 }
 
 
