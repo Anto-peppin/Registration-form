@@ -90,12 +90,10 @@ function validation(val) {
 button.addEventListener("click", (e) => {
   if (button.disabled) {
     e.preventDefault();
-    popup("Fill the form correctly", "red")
-  }
-  
-  else {
+    popup("Fill the form correctly", "red");
+  } else {
     e.preventDefault();
-    popup("Form fill Successfully ", "green");
+    popup("Form Submit Successfully ", "green");
     setTimeout(() => {
       form.submit();
     }, 3000);

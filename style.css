@@ -4,14 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  height:100dvh;
+  height: 100dvh;
   width: 100%;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   padding-bottom: 10px;
   margin: auto;
-
 }
 .form {
   width: 400px;
@@ -61,9 +59,9 @@ body {
   animation: form 2s linear forwards;
   fill: transparent;
 }
-.register_text{
-    margin-bottom: 20px;
-    width: 100%;
+.register_text {
+  margin-bottom: 20px;
+  width: 100%;
 }
 @keyframes form {
   80% {
@@ -76,16 +74,13 @@ body {
   }
 }
 
-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 45px;
-
-
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
 }
-
 
 .keycap {
   position: relative;
@@ -95,9 +90,7 @@ form{
   border-radius: 10px;
   background: linear-gradient(180deg, #282828, #202020);
   overflow: hidden;
-  transition:
-    transform 0.1s ease-in-out,
-    box-shadow 0.1s ease-in;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
@@ -132,8 +125,7 @@ form{
   right: 12px;
   background: linear-gradient(90deg, #232323, #4a4a4a);
   border-radius: 10px;
-  box-shadow:
-    -10px -10px 10px rgba(255, 255, 255, 0.25),
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25),
     10px 5px 10px rgba(0, 0, 0, 0.15);
   border-left: 1px solid #0004;
   border-bottom: 1px solid #0004;
@@ -141,26 +133,22 @@ form{
   transition: all 0.1s ease-in-out;
 }
 
-.keycap:active{
+.keycap:active {
   transform: translateY(2px);
-  box-shadow:
-    inset -4px 0 4px rgba(0, 0, 0, 0.1),
-    inset 0 -4px 4px rgba(0, 0, 0, 0.15),
-    0 0 0 2px rgba(0, 0, 0, 0.5),
+  box-shadow: inset -4px 0 4px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 4px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.5),
     5px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.keycap:disabled{
+.keycap:disabled {
   cursor: not-allowed;
   filter: brightness(50%);
-
 }
 .keycap:active::before {
   top: 5px;
   left: 5px;
   bottom: 11px;
   right: 11px;
-  box-shadow:
-    -5px -5px 5px rgba(255, 255, 255, 0.15),
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.15),
     5px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -168,10 +156,6 @@ form{
   transform: translateY(1px);
 }
 
-
-
-
-/* From Uiverse.io by 0xnihilism */ 
 .input__container {
   position: relative;
   background: #f0f0f0;
@@ -193,7 +177,6 @@ form{
   box-shadow: 10px 10px 0 -5px #e9b50b, 10px 10px 0 0 #000;
 }
 
-
 .input__button__shadow {
   cursor: pointer;
   border: 3px solid #000;
@@ -210,8 +193,8 @@ form{
   text-transform: uppercase;
 }
 
-.input__container:hover .input__button__shadow{
-      transform: translateZ(10px) translateX(-5px) translateY(-5px);
+.input__container:hover .input__button__shadow {
+  transform: translateZ(10px) translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 0 0 #000;
 }
 
@@ -241,7 +224,7 @@ form{
 .input__search::placeholder {
   color: #666;
   font-weight: bold;
-font-size: 14px;
+  font-size: 14px;
 }
 
 .input__search:hover,
@@ -250,21 +233,31 @@ font-size: 14px;
   transform: translateZ(20px) translateX(-5px) translateY(-5px);
   box-shadow: 5px 5px 0 0 #000;
 }
-.form_con{
-    position: relative;
+.form_con {
+  position: relative;
+  animation: slider 1s linear forwards;
+  top: calc((-15 * var(--position) * 1px));
+  opacity: 0;
+  animation-delay: calc(1 / var(--position) * 1s);
 }
-.error{
-position: absolute;
-bottom: -30px;
-left: 10px;
-color: red;
-font-size: 14px;
-height: 14px;
-font-family: sans-serif;
+@keyframes slider {
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+.error {
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  color: red;
+  font-size: 14px;
+  height: 14px;
+  font-family: sans-serif;
 }
 
-.popup{
-  padding: 10px;
+.popup {
+  padding: 10px 15px;
   border-radius: 40px;
   border: 1px solid;
   position: fixed;
@@ -272,36 +265,29 @@ font-family: sans-serif;
   color: white;
   font-size: 1.1em;
   font-family: sans-serif;
-  animation : pop 3s linear forwards;
-
+  animation: pop 3s linear forwards;
 }
 @keyframes pop {
- 0%{
-  top: -100%;
- }
- 20%,80%{
-  top: 10px;
- }
- 100%{
-   top: -100%;
-   display: none;
- }
-  
+  0% {
+    top: -100%;
+  }
+  20%,
+  80% {
+    top: 10px;
+  }
+  100% {
+    top: -100%;
+    display: none;
+  }
 }
-@media (max-width:450px){
-    .form{
-        width: 95%;
-    }
-    .input__search{
-      font-size: 15px;
-    }
-    .input__container:hover {
-        box-shadow: 5px 5px 0 0 #000;
-
-
-    }
-    
+@media (max-width: 450px) {
+  .form {
+    width: 95%;
+  }
+  .input__search {
+    font-size: 15px;
+  }
+  .input__container:hover {
+    box-shadow: 5px 5px 0 0 #000;
+  }
 }
-
-
-
