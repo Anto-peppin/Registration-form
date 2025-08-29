@@ -10,9 +10,8 @@ body {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 10px;
- /* align-items: center; */
   overflow: hidden;
-  border: 1px solid;
+
 }
 .form {
   width: 400px;
@@ -42,16 +41,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 10px 10px;
+  padding: 25px 10px 15px 10px;
   box-shadow: 0px 0px 10px black;
 }
 .hanger {
   position: absolute;
-  width: 150px;
+  width: 170px;
   bottom: 95%;
   z-index: 100;
-  filter: drop-shadow(0 2px 2px black);
-  transform: rotate(1deg);
+  filter: drop-shadow(1px 1px 2px black);
 }
 .form .register_text path {
   stroke: black;
@@ -259,6 +257,37 @@ position: absolute;
 bottom: -30px;
 left: 10px;
 color: red;
+font-size: 14px;
+height: 14px;
+font-family: sans-serif;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+.popup{
+  padding: 10px;
+  border-radius: 40px;
+  border: 1px solid;
+  position: fixed;
+  z-index: 100;
+  color: white;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  animation : pop 3s linear forwards;
+
+}
+@keyframes pop {
+ 0%{
+  top: -100%;
+ }
+ 20%,80%{
+  top: 10px;
+ }
+ 100%{
+   top: -100%;
+   display: none;
+ }
+  
 }
 @media (max-width:450px){
     .form{

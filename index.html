@@ -16,7 +16,7 @@
   <body>
     <div class="form">
       <img class="ben" src="./images/ben-bg.jpg" alt="" />
-      <img class="hanger" src="./images/hanger.png" alt="" />
+      <img class="hanger" src="./images/hanger1.png" alt="" />
       <div class="papper">
         <svg
           class="register_text"
@@ -41,7 +41,7 @@
           <div class="form_con">
             <div class="input__container">
               <div class="shadow__input"></div>
-              <button class="input__button__shadow">
+              <button type="button" class="input__button__shadow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -61,13 +61,13 @@
                 placeholder="Enter username"
               />
             </div>
-            <div class="error">Error message</div>
+            <div class="error"></div>
           </div>
           <!-- mail -->
           <div class="form_con">
             <div class="input__container">
               <div class="shadow__input"></div>
-              <button class="input__button__shadow">
+              <button type="button" class="input__button__shadow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -87,13 +87,13 @@
                 placeholder="Enter E-mail"
               />
             </div>
-            <div class="error">Error message</div>
+            <div class="error"></div>
           </div>
           <!-- password -->
           <div class="form_con">
             <div class="input__container">
               <div class="shadow__input"></div>
-              <button class="input__button__shadow">
+              <button type="button" class="input__button__shadow eye">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"
@@ -109,13 +109,15 @@
               <input
                 type="password"
                 name="password"
-                class="input__search"
-                placeholder="Enter password"
+                class="input__search pas"
+                placeholder="Enter password (min - 6)"
               />
             </div>
+            <div class="error"></div>
+
           </div>
           <!-- button -->
-          <button type="submit" class="keycap">
+          <button type="submit" disabled = true class="keycap">
             <div class="letter">
               Submit
               <svg fill="none" viewBox="0 0 24 24" class="enter-icon">
